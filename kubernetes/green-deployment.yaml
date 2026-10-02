@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce-green
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: ecommerce
+      version: green
+
+  template:
+    metadata:
+      labels:
+        app: ecommerce
+        version: green
+
+    spec:
+      containers:
+        - name: ecommerce
+          image: sapnarajbhar/ecommerce-app:2.0
+          ports:
+            - containerPort: 8000

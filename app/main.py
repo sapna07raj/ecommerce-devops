@@ -47,8 +47,9 @@ orders = []
 @app.get("/")
 def home():
     return {
-        "message": "E-Commerce DevOps Application is running",
-        "status": "success"
+        "message": "E-Commerce DevOps Application - Version 2.0",
+        "status": "success",
+        "deployment": "green"
     }
 
 
